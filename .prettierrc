@@ -1,0 +1,15 @@
+{
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "printWidth": 160,
+    "endOfLine": "auto",
+    "singleQuote": true,
+    "tabWidth": 4,
+    "indentStyle": "space",
+    "useTabs": false,
+    "importOrderSeparation": true,
+    "proseWrap": "never",
+    "quoteProps": "preserve",
+    "semi": true,
+    "trailingComma": "none"
+}
