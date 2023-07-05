@@ -11,7 +11,7 @@ module.exports = {
     ],
     // Specifying Parser
     parser: '@typescript-eslint/parser',
-    parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+    parserOptions: { ecmaVersion: 'latest', sourceType: 'module', project: '.eslintrc.cjs' },
 
     // Configuring third-party plugins
     plugins: ['react-refresh', 'react', 'react-hooks', '@typescript-eslint'],
