@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import viteLogo from 'vite.svg';
+// eslint-disable-next-line import/no-absolute-path
+import viteLogo from '/vite.svg';
 import reactLogo from './assets/react.svg';
 
 import './App.css';
