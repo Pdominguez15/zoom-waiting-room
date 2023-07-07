@@ -1,0 +1,22 @@
+// common variables
+$FontFamily: 'Roboto', sans-serif;
+
+// light theme
+$backgroundColorLight: #f0dede;
+$textColorLight: #c32f2f;
+
+// dark theme
+$backgroundColorDark: #333333;
+$textColorDark: #cbc3c3;
+
+.lightMode {
+    color: $textColorLight;
+    background-color: $backgroundColorLight;
+    font-family: $FontFamily;
+}
+
+.darkMode {
+    color: $textColorDark;
+    background-color: $backgroundColorDark;
+    font-family: $FontFamily;
+}
