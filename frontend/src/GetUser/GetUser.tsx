@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Cookie from 'js-cookie';
 
 import './GetUser.scss';
 
+const COOKIE_USER = 'zoom-waiting-room-user';
+
 export function GetUser(): JSX.Element {
-    const [cookieUser, setCookieUser] = React.useState<string>('');
+    const [cookieUser, setCookieUser] = useState<string>('');
 
     useEffect(() => {
-        const cookieValue = Cookie.get('zoom-waiting-room-user');
-        const loggedInSection: HTMLElement = document.getElementById('loggedIn') as HTMLElement;
+        const cookieValue = Cookie.get(COOKIE_USER);
+        const loggedInSection = document.getElementById('loggedIn') as HTMLElement;
         if (loggedInSection) {
             loggedInSection.innerHTML = cookieValue ? `You are logged in as ${cookieValue}` : 'You need to log in';
         }
@@ -24,7 +26,7 @@ export function GetUser(): JSX.Element {
     };
 
     const handleSetCookie = () => {
-        Cookie.set('zoom-waiting-room-user', cookieUser);
+        Cookie.set(COOKIE_USER, cookieUser);
     };
 
     return (
