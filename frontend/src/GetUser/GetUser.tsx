@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import Cookie from 'js-cookie';
 
@@ -17,7 +16,7 @@ export function GetUser(): JSX.Element {
     }, []);
 
     const clearInput = (e: React.FocusEvent<HTMLInputElement>) => {
-        setTimeout(() => (e.target.value = ''), 1000);
+        e.target.value = '';
     };
 
     const handleInputChange = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -31,7 +30,7 @@ export function GetUser(): JSX.Element {
     return (
         <>
             <div>
-                <p id="loggedIn"></p>
+                <p id="loggedIn" />
             </div>
             <div className="inputContainer">
                 <input type="text" className="input" placeholder="User" onChange={handleInputChange} onBlur={clearInput} />
