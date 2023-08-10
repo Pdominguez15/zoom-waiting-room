@@ -23,5 +23,13 @@ jobs:
         run: npm install
 
       - name: Run linter
+        id: linter
         working-directory: ./frontend
         run: npm run lint
+
+      - name: Check linter result
+        run: |
+          if [ ${{ steps.linter.outcome }} != 'success' ]; then
+            echo "Linting failed. Cannot merge this PR."
+            exit 1
+          fi
