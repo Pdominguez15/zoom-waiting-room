@@ -11,7 +11,14 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended'
     ],
-    overrides: [],
+    overrides: [
+        {
+            files: ['**/*.spec.js*'],
+            rules: {
+                'import/no-extraneous-dependencies': 'off'
+            }
+        }
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 'latest',
