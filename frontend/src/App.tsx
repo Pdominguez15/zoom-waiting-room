@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
 // eslint-disable-next-line import/no-absolute-path
 import viteLogo from '/vite.svg';
 import reactLogo from './assets/react.svg';
@@ -8,9 +10,13 @@ import './App.css';
 function App() {
     const [count, setCount] = useState(0);
 
+    const { t } = useTranslation();
+
     return (
         <>
             <div>
+                <p>{t('welcome')}</p>
+
                 <a href="https://vitejs.dev" rel="noreferrer" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
                 </a>
