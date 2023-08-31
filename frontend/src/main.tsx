@@ -4,6 +4,7 @@ import App from './App';
 import { ThemeProvider } from './ThemeProvider/ThemeProvider';
 import { GetUser } from './GetUser/GetUser';
 
+import './i18n';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
